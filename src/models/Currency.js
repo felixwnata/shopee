@@ -82,9 +82,8 @@ class Currency extends Component {
   // -------Fungsi menghapus currency--------
   // ----------------------------------------
   onDeleteChild = curCode => {
-    console.log(curCode);
     let newArr = this.state.children.filter(arr => {
-      return arr.key !== curCode;
+      return arr.key !== curCode.target.value;
     });
 
     this.setState({ children: newArr });
@@ -146,7 +145,9 @@ const ChildComponent = props => (
         </p>
       </div>
       <div className="child_right">
-        <button onClick={props.deleteChild.bind(props.curCode)}>(-)</button>
+        <button value={props.curCode} onClick={props.deleteChild.bind(this)}>
+          (-)
+        </button>
       </div>
     </div>
   </div>
