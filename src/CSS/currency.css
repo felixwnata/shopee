@@ -1,0 +1,42 @@
+.box {
+  width: 30%;
+  padding: 10px;
+  margin: 30px;
+  border: 1px solid black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.child {
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.header > i {
+  float: left;
+  padding: 10px;
+}
+
+.child_contain {
+  text-align: left;
+  width: 100%;
+}
+
+.child_left {
+  width: 65%;
+}
+
+.child_right {
+  width: 25%;
+}
