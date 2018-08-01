@@ -1,4 +1,0 @@
-1. Everything in this create by only running create-react-app in terminal
-2. All code for this test is at src/models/Currency.js
-3. Not using any design template because it was stated that wont scoring the design
-4. Can run the app with "npm start" command in terminal
