@@ -7,6 +7,8 @@ class Currency extends Component {
     this.myInput = React.createRef();
 
     this.state = {
+      baseCur: "EUR",
+      baseCurRate: 100,
       cur: [], //currency object
       error: "", //error flag
       curDesc: {
@@ -91,7 +93,12 @@ class Currency extends Component {
 
   render() {
     return (
-      <ParentComponent addChild={this.onAddChild} refInput={this.myInput}>
+      <ParentComponent
+        addChild={this.onAddChild}
+        refInput={this.myInput}
+        baseCur={this.state.baseCur}
+        baseCurRate={this.state.baseCurRate}
+      >
         {this.state.children}
       </ParentComponent>
     );
@@ -105,8 +112,8 @@ const ParentComponent = props => (
         <i>EUR - Euro</i>
         <br /> <br />
         <b>
-          <span className="left">EUR</span>
-          <span className="right">100</span>
+          <span className="left">{props.baseCur}</span>
+          <span className="right">{props.baseCurRate}</span>
           <br />
         </b>
       </p>
